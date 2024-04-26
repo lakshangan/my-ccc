@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fadeIn {
+            opacity: 0; /* Start with invisible text */
+            animation: fadeIn ease-in 2s; /* Define the animation */
+            animation-fill-mode: forwards; /* Keep the final state after animation */
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; } /* Start transparent */
+            to { opacity: 1; } /* End opaque */
+          }
+
+
+          @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0;}
+        }
+        
+
+          h1 {
+            color: transparent;
+            position: absolute;
+            top: 35%;
+            left:30%;
+            font-size: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            opacity: 0; /* Start invisible */
+  transform: translateX(-50px); /* Start off-screen to the left */
+  animation: fadeIn 2s ease-in-out forwards;
+           
+            background: linear-gradient(to right, #d104dc,
+                    rgb(9, 159, 223),rgb(28, 200, 239),#d104dc);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: colorFlow 20s linear infinite;
+        
+          }
+
+          span{
+            color: rgb(238, 203, 5); 
+          }
+        
+        </style>
+        
+
+      
+</head>
+<body style="background-color:black;">
+    <h1 class="fadeIn">Hello Crypto enthusist <span> ⚡️</span></h1>
+
+
+  <script src="textanimation.js"></script>
+</body>
+</html>
